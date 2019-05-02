@@ -10,6 +10,7 @@
 
     <!-- 配置插件 -->
     <build>
+        <defaultGoal>compile</defaultGoal>
         <!-- 配置插件 -->
         <plugins>
             <plugin>
@@ -18,9 +19,12 @@
                 <configuration>
                     <!-- 门户服务端口号 -->
                     <port>8080</port>
-                    <path>http://182.61.41.183:8080/</path>
+                    <path>/</path>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+
 </project>
+
