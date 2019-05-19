@@ -21,6 +21,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(User user, HttpServletRequest request){
+        System.out.print("login: "+request.getRequestURL());
         String md5Pwd = MD5Util.MD5Encode(user.getPassword(),"UTF-8");
         user.setPassword(md5Pwd);
 
@@ -35,8 +36,5 @@ public class UserController {
             return "redirect:/main.jsp";
         }
     }
-    @RequestMapping("/main")
-    public String main(){
-        return "main";
-    }
+
 }
