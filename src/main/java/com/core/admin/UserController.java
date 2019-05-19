@@ -35,4 +35,8 @@ public class UserController {
             return "redirect:/main.jsp";
         }
     }
+    @RequestMapping("main")
+    public String main(){
+        return "main";
+    }
 }
