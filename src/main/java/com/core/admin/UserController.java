@@ -35,7 +35,7 @@ public class UserController {
             return "redirect:/main.jsp";
         }
     }
-    @RequestMapping("main")
+    @RequestMapping("/main")
     public String main(){
         return "main";
     }
