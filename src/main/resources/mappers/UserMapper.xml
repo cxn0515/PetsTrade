@@ -14,4 +14,8 @@
         select * from
         user where userName=#{userName} and password=#{password} limit 1
     </select>
+    
+    <select id="main" resultType="com.core.entity.User">
+        select * from user;
+    </select>
 </mapper>

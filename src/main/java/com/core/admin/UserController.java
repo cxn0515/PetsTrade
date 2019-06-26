@@ -5,10 +5,12 @@ import com.core.service.UserService;
 import com.core.utils.MD5Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by chengxiaonan on 2019/5/18.
@@ -35,6 +37,12 @@ public class UserController {
             session.setAttribute("currentUser",resultUser);
             return "redirect:/main.jsp";
         }
+    }
+
+    @RequestMapping(value = "/main")
+    public @ResponseBody List<User> main(){
+        List<User> list = userService.main();
+        return list;
     }
 
 }

@@ -1,14 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-         pageEncoding="utf-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ssm-login系统主页</title>
+    <meta charset="UTF-8">
+    <title>Basic DataGrid - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ui/themes/icon.css">
+    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ui/demo.css">--%>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/ui/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/ui/jquery.easyui.min.js"></script>
+</head>
 <body>
-<br>
-你已经登录成功啦!
-<br>
-你现在看到的就是spring+springmvc+mybatis构建的demo
+<h2>Basic DataGrid</h2>
+<p>The DataGrid is created from markup, no JavaScript code needed.</p>
+<div style="margin:20px 0;"></div>
+
+<table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
+       data-options="singleSelect:true,collapsible:true,url:'${pageContext.request.contextPath}/user/main',method:'get'">
+    <thead>
+    <tr>
+        <th data-options="field:'userName',width:80">Item ID</th>
+        <th data-options="field:'password',width:100">Product</th>
+        <th data-options="field:'roleName',width:80,align:'right'">List Price</th>
+    </tr>
+    </thead>
+</table>
+
 </body>
 </html>

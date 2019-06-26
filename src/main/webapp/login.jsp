@@ -76,7 +76,7 @@
 </head>
 <body>
 <form id=adminlogin method=post
-      name=adminlogin action="${pageContext.request.contextPath}/user/login.do">
+      name=adminlogin action="${pageContext.request.contextPath}/user/login">
     <div></div>
     <table style="margin: auto; width: 100%; height: 100%" border=0
            cellSpacing=0 cellPadding=0>
@@ -86,8 +86,8 @@
         </tr>
         <tr style="height: 254px">
             <td>
-                <div style="margin: 0px auto; width: 936px"><img
-                        style="display: block" src="${pageContext.request.contextPath}/images/body_03.jpg"></div>
+                <%--<div style="margin: 0px auto; width: 936px"><img--%>
+                        <%--style="display: block" src="${pageContext.request.contextPath}/images/body_03.jpg"></div>--%>
                 <div style="background-color: #278296">
                     <div style="margin: 0px auto; width: 936px">
                         <div

@@ -6,6 +6,7 @@ import com.core.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by chengxiaonan on 2019/5/18.
@@ -18,5 +19,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(User user) {
         return userDao.login(user);
+    }
+
+    @Override
+    public List<User> main() {
+        return userDao.main();
     }
 }
