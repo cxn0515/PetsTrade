@@ -25,4 +25,14 @@ public class UserServiceImpl implements UserService {
     public List<User> main() {
         return userDao.main();
     }
+
+    @Override
+    public int addUser(User user) {
+        return userDao.addUser(user);
+    }
+
+    @Override
+    public List<User> getList() {
+        return userDao.getList();
+    }
 }

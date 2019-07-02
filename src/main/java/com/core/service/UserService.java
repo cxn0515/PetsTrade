@@ -12,4 +12,8 @@ public interface UserService {
     public User login(User user);
 
     public List<User> main();
+
+    int addUser(User user);
+
+    List<User> getList();
 }

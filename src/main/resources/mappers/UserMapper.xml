@@ -5,17 +5,47 @@
 <mapper namespace="com.core.dao.UserDao">
     <resultMap type="com.core.entity.User" id="UserResult">
         <result property="id" column="id"/>
-        <result property="userName" column="userName"/>
+        <result property="userName" column="USER_NAME"/>
         <result property="password" column="password"/>
-        <result property="roleName" column="roleName"/>
+        <result property="roleName" column="ROLE_NAME"/>
     </resultMap>
 
     <select id="login" parameterType="User" resultMap="UserResult">
         select * from
-        user where userName=#{userName} and password=#{password} limit 1
+        user where USER_NAME=#{userName} and PASSWORD=#{password} limit 1
     </select>
     
     <select id="main" resultType="com.core.entity.User">
+        select * from user;
+    </select>
+
+    <insert id="addUser" parameterType="com.core.entity.User">
+        INSERT INTO user (
+        <if test="userName != null and userName != ''">
+          USER_NAME,
+        </if>
+        <if test="password != null and password != ''">
+            PASSWORD,
+        </if>
+        <if test="roleName != null and roleName != ''">
+            ROLE_NAME,
+        </if>
+        CREATE_DATE
+        ) VALUES (
+        <if test="userName != null and userName != ''">
+            #{userName},
+        </if>
+        <if test="password != null and password != ''">
+            #{password},
+        </if>
+        <if test="roleName != null and roleName != ''">
+            #{roleName},
+        </if>
+        now()
+        )
+    </insert>
+    
+    <select id="getList" resultMap="UserResult">
         select * from user;
     </select>
 </mapper>

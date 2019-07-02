@@ -1,0 +1,24 @@
+[{
+  "children": [{
+    "id": "3",
+    "parent": "1",
+    "pid": "11",
+    "state": "1",
+    "text": "添加用户",
+    "url": "login.jsp"
+  }],
+  "id": "1",
+  "parent": "",
+  "pid": "1",
+  "state": "1",
+  "text": "用户管理",
+  "url": "login.jsp"
+}, {
+  "children": [],
+  "id": "2",
+  "parent": "",
+  "pid": "2",
+  "state": "1",
+  "text": "信息管理",
+  "url": "login.jsp"
+}]

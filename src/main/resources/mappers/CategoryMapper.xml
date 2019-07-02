@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.core.dao.CategoryDao">
+    <resultMap type="com.core.entity.Category" id="CategoryResult">
+        <result property="id" column="id"/>
+        <result property="chiName" column="chiName"/>
+        <result property="status" column="status"/>
+        <result property="createDate" column="createDate"/>
+    </resultMap>
+
+    <insert id="insertCategory" parameterType="com.core.entity.Category">
+        INSERT INTO category (
+        <if test="chiName != null and chiName != ''">
+            chiName,
+        </if>
+        <if test="status != null and status != ''">
+            status,
+        </if>
+        createDate
+        ) VALUES (
+        <if test="chiName != null and chiName != ''">
+            #{chiName},
+        </if>
+        <if test="status != null and status != ''">
+            #{status},
+        </if>
+        now()
+        )
+    </insert>
+
+    <delete id="deleteCategory" parameterType="com.core.entity.Category">
+        delete from category where id = #{id}
+    </delete>
+
+    <insert id="updateCategory" parameterType="com.core.entity.Category">
+        UPDATE category SET
+        <if test="chiName != null and chiName != ''">
+            chiName = #{chiName},
+        </if>
+        <if test="status != null and status != ''">
+            status = #{status},
+        </if>
+        createDate = now()
+        WHERE id = #{id}
+    </insert>
+
+    <select id="getList" resultType="java.util.Map">
+       SELECT @rownum:=@rownum+1 rownum,t.* From (select @rownum:=0,category.* from category) t
+    </select>
+</mapper>

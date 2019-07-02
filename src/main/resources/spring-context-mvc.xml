@@ -30,7 +30,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"
     <!-- 加载静态资源 -->
     <mvc:resources location="/images/" mapping="/images/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
-    <mvc:resources location="/views/resources/ui/" mapping="/ui/**"/>
+    <mvc:resources location="/ui/" mapping="/ui/**"/>
 
     <!-- 视图解析器 -->
     <bean id="viewResolver"
