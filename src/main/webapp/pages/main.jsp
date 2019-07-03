@@ -13,11 +13,11 @@
     <base href="<%=basePath%>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Basic DataGrid - jQuery EasyUI Demo</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ui/themes/icon.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/ui/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/ui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/ui/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>ui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>ui/themes/icon.css">
+    <script type="text/javascript" src="<%=basePath%>ui/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>ui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>ui/locale/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
 <div class="easyui-layout" data-options="fit:true">
