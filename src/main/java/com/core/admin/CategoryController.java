@@ -79,4 +79,9 @@ public class CategoryController {
 
         return null;
     }
+
+    @RequestMapping("/list")
+    public String list(){
+        return "categoryList";
+    }
 }

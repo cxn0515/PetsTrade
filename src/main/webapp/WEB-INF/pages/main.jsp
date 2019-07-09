@@ -65,6 +65,7 @@
 
             }
         }
+
     });
     function openTab(node) {
         if ($("#tabs").tabs("exists", node.text)) {

@@ -35,12 +35,22 @@ public class UserController {
         if (resultUser == null) {
             request.setAttribute("user", user);
             request.setAttribute("errMsg", "请认真核对账号、密码！");
-            return "pages/login";
+            return "login";
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("currentUser", resultUser);
-            return "redirect:/pages/main.jsp";
+            return "redirect:main.action";
         }
+    }
+
+    @RequestMapping("/main")
+    public String main(){
+        return "main";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(){
+        return "addUser";
     }
 
     @RequestMapping(value = "/add")
@@ -69,6 +79,11 @@ public class UserController {
             }
         }
         return null;
+    }
+
+    @RequestMapping(value = "/list")
+    public String list(){
+        return "userList";
     }
 
     @RequestMapping(value = "/userList")
