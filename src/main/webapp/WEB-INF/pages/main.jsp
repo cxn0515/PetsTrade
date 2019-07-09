@@ -68,6 +68,7 @@
 
     });
     function openTab(node) {
+        var basePath = "<%=basePath%>";
         if ($("#tabs").tabs("exists", node.text)) {
             $("#tabs").tabs("select", node.text);
         } else {
@@ -75,7 +76,7 @@
                 title: node.text,
                 closable: true,
                 content: '<iframe scrolling="auto" frameborder="0"  src='
-                + <%=basePath%>+node.url
+                + basePath+node.url
                 + ' style="width:100%;height:100%;"></iframe>'
             });
         }
