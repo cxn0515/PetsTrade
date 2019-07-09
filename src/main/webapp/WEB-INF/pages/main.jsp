@@ -75,7 +75,7 @@
                 title: node.text,
                 closable: true,
                 content: '<iframe scrolling="auto" frameborder="0"  src='
-                + node.url
+                + <%=basePath%>+node.url
                 + ' style="width:100%;height:100%;"></iframe>'
             });
         }
