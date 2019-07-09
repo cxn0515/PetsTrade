@@ -25,8 +25,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (user != null) {
             return true;
         }
-        //httpServletRequest.getRequestDispatcher("/user/login.action").forward(httpServletRequest,httpServletResponse);
-        return true;
+        httpServletRequest.getRequestDispatcher("/user/login.action").forward(httpServletRequest,httpServletResponse);
+        return false;
     }
 
     @Override
