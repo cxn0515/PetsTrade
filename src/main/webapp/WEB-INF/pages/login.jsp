@@ -13,7 +13,11 @@
     <base href="<%=basePath%>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>ssm-login系统登录</title>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>ui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>ui/themes/icon.css">
     <script type="text/javascript" src="<%=basePath%>ui/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>ui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>ui/locale/easyui-lang-zh_CN.js"></script>
     <style type=text/css>
         body {
             text-align: center;
